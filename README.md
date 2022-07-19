@@ -226,7 +226,7 @@ Options:
                               database user and assign the HDI admin privileges
                               to this user. In this case a dummy password can
                               be given.
-                                                      [boolean] [default: false]
+                                                      [boolean] [default: true]
 ```
 
 ### adminHDIGroup
