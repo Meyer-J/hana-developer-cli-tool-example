@@ -572,6 +572,12 @@ Connection Parameters:
   -a, --admin, --Admin  Connect via admin (default-env-admin.json)
                                                       [boolean] [default: false]
       --conn            Connection Filename to override default-env.json
+      --setUserGroup, --userGrp
+                        Set this parameter to false to avoid that the container's
+                        DT and RT users are assigned to a user group. To avoid
+                        'missing privilege' errors in case your instance does not
+                        use user groups.
+                                                       [boolean] [default: true]
 
 Troubleshooting:
       --disableVerbose, --quiet  Disable Verbose output - removes all extra

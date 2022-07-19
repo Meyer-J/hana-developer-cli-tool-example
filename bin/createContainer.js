@@ -21,6 +21,12 @@ export const builder = base.getBuilder({
     default: '',
     desc: base.bundle.getText("group")
   },
+  setUserGroup: {
+    alias: ['userGrp'],
+    desc: base.bundle.getText("setUserGroup"),
+    type: 'boolean',
+    default: true
+  },
   save: {
     alias: ['s', 'Save'],
     desc: base.bundle.getText("saveHDI"),
@@ -43,6 +49,10 @@ export function handler (argv) {
     },
     group: {
       description: base.bundle.getText("group"),
+      required: false
+    },
+    setUserGroup: {
+      description: base.bundle.getText("setUserGroup"),
       required: false
     },
     save: {
@@ -98,7 +108,7 @@ export async function activate(prompts) {
     let userGroup = await db.execSQL(
       `SELECT * FROM SYS.USERGROUPS WHERE USERGROUP_NAME = 'DEFAULT'`)
     let useGroup = false
-    if (userGroup.length > 0) {
+    if (prompts.setUserGroup && userGroup.length > 0) {
       useGroup = true
     }
 
