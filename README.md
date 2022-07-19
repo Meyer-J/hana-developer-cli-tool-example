@@ -572,12 +572,6 @@ Connection Parameters:
   -a, --admin, --Admin  Connect via admin (default-env-admin.json)
                                                       [boolean] [default: false]
       --conn            Connection Filename to override default-env.json
-      --setUserGroup, --userGrp
-                        Set this parameter to false to avoid that the container's
-                        DT and RT users are assigned to a user group. To avoid
-                        'missing privilege' errors in case your instance does not
-                        use user groups.
-                                                       [boolean] [default: true]
 
 Troubleshooting:
       --disableVerbose, --quiet  Disable Verbose output - removes all extra
@@ -591,6 +585,12 @@ Troubleshooting:
 Options:
   -c, --container, --Container     Container Name                       [string]
   -g, --group, --Group             Container Group Name [string] [default: empty]
+      --setUserGroup, --userGrp    Set this parameter to false to avoid that the
+                                   container's DT and RT users are assigned to a
+                                   user group. To avoid 'missing privilege'
+                                   errors in case your instance does not use
+                                   user groups.
+                                                       [boolean] [default: true]
   -s, --save, --Save               Save Credentials to default-env.json
                                                        [boolean] [default: true]
   -e, --encrypt, --Encrypt, --ssl  Encrypt connections (required for SAP HANA
